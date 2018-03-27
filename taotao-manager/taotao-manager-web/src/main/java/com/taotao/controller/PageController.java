@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PageController {
 
     /**
-     * 打开首页
+     * 打开首页，页面跳转
      */
     @RequestMapping("/")
     public String showIndex(){
@@ -24,4 +24,6 @@ public class PageController {
     public String showPage(@PathVariable String page){
         return page;
     }
+
+
 }

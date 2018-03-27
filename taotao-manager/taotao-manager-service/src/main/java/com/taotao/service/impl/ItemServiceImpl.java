@@ -1,6 +1,7 @@
 package com.taotao.service.impl;
 
 import com.taotao.mapper.TbItemMapper;
+import com.taotao.common.pojo.EUDataGridResult;
 import com.taotao.pojo.TbItem;
 import com.taotao.pojo.TbItemExample;
 import com.taotao.service.ItemService;
@@ -26,6 +27,11 @@ public class ItemServiceImpl implements ItemService {
             TbItem item = list.get(0);
             return item;
         }
+        return null;
+    }
+
+    @Override
+    public EUDataGridResult getItemList(Integer page, Integer rows) {
         return null;
     }
 }

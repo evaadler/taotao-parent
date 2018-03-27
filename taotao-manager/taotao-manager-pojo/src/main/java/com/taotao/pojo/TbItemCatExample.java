@@ -594,12 +594,17 @@ public class TbItemCatExample {
             addCriterion("updated not between", value1, value2, "updated");
             return (Criteria) this;
         }
+
+
     }
 
     public static class Criteria extends GeneratedCriteria {
 
         protected Criteria() {
             super();
+        }
+
+        public void addParentIdEqualTo(long parentId) {
         }
     }
 
