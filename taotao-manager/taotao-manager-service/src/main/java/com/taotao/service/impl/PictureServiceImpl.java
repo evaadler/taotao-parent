@@ -12,6 +12,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/***
+ * 图片上传服务
+ */
 @Service
 public class PictureServiceImpl implements PictureService {
 
@@ -23,8 +26,8 @@ public class PictureServiceImpl implements PictureService {
     private String FTP_USERNAME;
     @Value("${FTP_PASSWORD}")
     private String FTP_PASSWORD;
-    @Value("${FTP_BASE_PARH}")
-    private String FTP_BASE_PARH;
+    @Value("${FTP_BASE_PATH}")
+    private String FTP_BASE_PATH;
     @Value("${IMAGE_BASE_URL}")
     private String IMAGE_BASE_URL;
 
@@ -42,7 +45,7 @@ public class PictureServiceImpl implements PictureService {
         String imagePath = new DateTime().toString("/yyyy/MM/dd");
         try {
            boolean result = FtpUtil.uploadFile(FTP_ADDRESS, FTP_PORT, FTP_USERNAME, FTP_PASSWORD,
-                    FTP_BASE_PARH, imagePath, newName, uploadFile.getInputStream());
+                    FTP_BASE_PATH, imagePath, newName, uploadFile.getInputStream());
 
            if (!result){
                resultMap.put("error", 1);
