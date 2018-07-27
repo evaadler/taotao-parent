@@ -35,7 +35,8 @@
 		</ul>
 	</li>
 </div>
-<script style="text/javascript">
+
+<script>
 	$(function(){
 		TAOTAO.initItemCat({
 			fun:function(node){
@@ -92,6 +93,8 @@
 					});					
 				}
 			});
+
+			// JSON.stringify: 把json数据转化为字符串
 			var url = "/item/param/save/"+$("#itemParamAddTable [name=cid]").val();
 			$.post(url,{"paramData":JSON.stringify(params)},function(data){
 				if(data.status == 200){

@@ -1,5 +1,8 @@
 package com.taotao.controller;
 
+import com.taotao.pojo.TbItemExample;
+import com.taotao.pojo.TbItemParam;
+
 import com.taotao.result.TaotaoResult;
 import com.taotao.service.ItemParamService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +25,14 @@ public class ItemParamController {
         return result;
     }
 
+    @RequestMapping("/save/{cid}")
+    @ResponseBody
+    public TaotaoResult insertItemParam(@PathVariable Long cid, String paramData){
+        TbItemParam itemParam = new TbItemParam();
+        itemParam.setItemCatId(cid);
+        itemParam.setParamData(paramData);
+        TaotaoResult result = itemParamService.insertItemParam(itemParam);
+        return result;
+    }
 
 }

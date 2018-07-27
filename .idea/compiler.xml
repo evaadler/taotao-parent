@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/taotao-manager/taotao-manager-service/src/main/java/com/taotao/service/impl/PictureServiceImpl.java" />
+    </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -15,13 +18,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="taotao-common" target="1.7" />
-      <module name="taotao-manager" target="1.7" />
-      <module name="taotao-manager-mapper" target="1.7" />
-      <module name="taotao-manager-pojo" target="1.7" />
-      <module name="taotao-manager-service" target="1.7" />
-      <module name="taotao-manager-web" target="1.7" />
-      <module name="taotao-parent" target="1.7" />
+      <module name="taotao-common" target="1.8" />
+      <module name="taotao-manager" target="1.8" />
+      <module name="taotao-manager-mapper" target="1.8" />
+      <module name="taotao-manager-pojo" target="1.8" />
+      <module name="taotao-manager-service" target="1.8" />
+      <module name="taotao-manager-web" target="1.8" />
+      <module name="taotao-parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
