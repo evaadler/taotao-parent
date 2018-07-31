@@ -2,15 +2,17 @@ package com.taotao.rest.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class ItemCat {
+import java.util.List;
+
+public class CatNode {
     @JsonProperty("n")
     private String name;
 
     @JsonProperty("u")
     private String url;
 
-    @JsonProperty("d")
-    private String data;
+    @JsonProperty("i")
+    private List<?> item;
 
     public String getName() {
         return name;
@@ -28,11 +30,11 @@ public class ItemCat {
         this.url = url;
     }
 
-    public String getData() {
-        return data;
+    public List<?> getItem() {
+        return item;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setItem(List<?> item) {
+        this.item = item;
     }
 }
